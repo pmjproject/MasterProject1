@@ -154,7 +154,7 @@ $role= $user_data['role'];
                 $sql = "UPDATE `users` SET `f_name`='$_POST[f_name]',`l_name`='$_POST[l_name]',`address`='$_POST[address]',`telephoneNo`='$_POST[telephoneNo]',`nic`='$_POST[nic]',`email`='$_POST[email]' WHERE `f_name`='$v'";
                 if(mysqli_query($connection,$sql)){
                     echo "<script>alert('Successfully Updated');
-                     window.location.href='http://localhost/MasterProject1/InventoryManager/admin/view.php';</script>";
+                     window.location.href='http://localhost/MasterProject1/InventoryManager/Do/view.php';</script>";
                     
                 } else{echo "error";}
             }
@@ -168,12 +168,12 @@ $role= $user_data['role'];
 
              <a class="enter" style="float:left;text-align:center;" href="add.php">Add</a>
                <a class="enter" style="float:left;text-align:center;"href="view.php">Search</a>
-                <a class="enter" style="float:left;text-align:center;" href="backup.php">Backups</a>
+               
                 <a class="enter" style="float:left;text-align:center;" href="../inventory.php">Back</a>
 
       
                         </br> </br></br></br>
-                <h1 class="add">Update Admin</h1>
+                <h1 class="add">Update Data Entry Operator</h1>
                 <table id="ad">
                     <tr>
                         <td>

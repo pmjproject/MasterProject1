@@ -73,29 +73,30 @@ $role= $user_data['role'];
             $address=$_POST['address'];
             $tpNo=$_POST['tpno'];
             $nic=$_POST['nic'];
-            $fax=$_POST['email'];
+            $fax=$_POST['fax'];
             $uname=$_POST['uname'];
             $password=$_POST['password'];
 
 
-            $sql = "INSERT INTO users (f_name,l_name,address,telephoneNo,nic,email,username,password) VALUES ('$fname','$lname','$address','$tpNo','$nic',' $email','$uname','$password')";
+            $sql = "INSERT INTO users (f_name,l_name,address,telephoneNo,nic,email,username,password) VALUES ('$fname','$lname','$address','$tpNo','$nic',' $fax','$uname','$password')";
             if (mysqli_query($conn, $sql)) {
                 echo "";
             }
             else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }
-            header("Location:inventory.php");
+            header("Location:add.php");
         }
+
         ?>
         <form class="AddPro" action="" method="POST" enctype="multipart/form-data" name="Form" onsubmit="return(validate());">
-               <a href="add.php">Add</a>
-               <a href="view.php">Search</a>
-                <a href="backup.php">Backups</a>
-                <a href="../inventory.php">Back</a>
+               <a class="enter" style="float:left;text-align:center;" href="add.php">Add</a>
+               <a  class="enter" style="float:left;text-align:center;"href="view.php">Search</a>
+                <a class="enter" style="float:left;text-align:center;" href="backup.php">Backups</a>
+                <a class="enter" style="float:left;text-align:center;"href="../inventory.php">Back</a>
 
       
-                        </br> </br>
+                        </br> </br></br></br></br>
             <table id="ad">
                 <h1 class="add">Add admin</h1>
                     
@@ -109,7 +110,7 @@ $role= $user_data['role'];
                     </tr>
                     <tr>
                         <td id="data">Address:</td>
-                        <td id="data"><input type="text" name="address" style="width: 200px" required></td>
+                        <td id="data"><input type="text" name="address" style="width: 300px" required></td>
                     </tr>
                     <tr>
                         <td id="data">Mobile:</td>
@@ -118,7 +119,7 @@ $role= $user_data['role'];
                         <td id="data">NIC:</td>
                         <td id="data"><input type="text" name="nic" style="width: 200px" required></td>
                     </tr><tr>
-                        <td id="data">email:</td>
+                        <td id="data">Email:</td>
                         <td id="data"><input type="text" name="fax" style="width: 200px" required></td>
                     </tr><tr>
                         <td id="data">User Name:</td>

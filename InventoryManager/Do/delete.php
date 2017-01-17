@@ -2,13 +2,13 @@
 
 	require "../../database/connect.php";
 	session_start();
-	$v = $_SESSION['user_id'];
+	$v = $_SESSION['f_name'];
 		
-	$sql = "UPDATE users SET active=0 WHERE user_id='$v'";
+	$sql = "UPDATE users SET active=0 WHERE f_name='$v'";
 
 	if (mysqli_query($connection, $sql)){
 		echo "Record deleted successfully";
-		header("Location: searchAdmin.php");
+		header("Location: view.php");
 	}else{
 		echo "Error deleting record: ";
 		}

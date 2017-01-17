@@ -65,16 +65,16 @@ $role= $user_data['role'];
 		require "../../database/connect.php";
 		//session_start();
 		$error=FALSE;
-		$dealer_iderr = $v1 = "";
+		$user_iderr = $v1 = "";
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			if(empty($_POST['dealer_name'])){
-				$dealer_iderr = "";
+			if(empty($_POST['f_name'])){
+				$user_iderr = "";
 				$error = TRUE;
 			}else{
 				
-				$dealer_name = $_POST['dealer_name'];
-				$v1 = $_POST['dealer_name'];
-				$_SESSION['dealer_name'] = $v1;
+				$f_name = $_POST['f_name'];
+				$v1 = $_POST['f_name'];
+				$_SESSION['f_name'] = $v1;
 				header("Location: serchAdmin.php");
 			}
 		}
@@ -84,10 +84,10 @@ $role= $user_data['role'];
 
 
 
-               <a href="add.php">Add</a>
-               <a href="view.php">Search</a>
-                <a href="backup.php">Backups</a>
-                <a href="../inventory.php">Back</a>
+               <a class="enter" style="float:left;text-align:center;" href="add.php">Add</a>
+               <a class="enter" style="float:left;text-align:center;" href="view.php">Search</a>
+                <a class="enter" style="float:left;text-align:center;" href="backup.php">Backups</a>
+                <a class="enter" style="float:left;text-align:center;" href="../inventory.php">Back</a>
 
 
 
@@ -99,12 +99,12 @@ $role= $user_data['role'];
 				<form action="" method="POST">
 					<tr>
 						<td>
-							<b>Admin Name:<span class="error">* <?php echo $dealer_iderr;?></span></b>
+							<b>Admin Name:<span class="error">* <?php echo $user_iderr;?></span></b>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="text" name="dealer_name" size="30" maxlength="25" style="width: 300px" required>
+							<input type="text" name="f_name" size="30" maxlength="25" style="width: 300px" required>
 							<input type="submit" name="submit" value="Search">
 					</tr>
 				</form>

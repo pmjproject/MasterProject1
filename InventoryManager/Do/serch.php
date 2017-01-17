@@ -140,11 +140,11 @@ $role= $user_data['role'];
         <?php
         require "../../database/connect.php";
         //session_start();
-        $v1 = $_SESSION['dealer_name'];
+        $v1 = $_SESSION['f_name'];
         $error=FALSE;
 
-        $dealer_iderr = "";
-        $v0=$v2=$v3=$v4=$v5=$v6=$v7=$v8=$v9=$zero="";
+        $user_iderr = "";
+        $v0=$v2=$v3=$v4=$v5=$v6=$zero="";
         /*if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             $dealer_name = $_POST['dealer_name'];
@@ -170,7 +170,7 @@ $role= $user_data['role'];
                 $v4=$row["nic"];
                 $v5=$row["email"];
                 $v6=$row["username"];
-                $v7=$row["password"];
+               
                 
             }
         }else{
@@ -217,10 +217,10 @@ $role= $user_data['role'];
                 <form action="" method="POST">
 
 
- <a href="add.php">Add</a>
-               <a href="view.php">Search</a>
+ <a class="enter" style="float:left;text-align:center;" href="add.php">Add</a>
+               <a class="enter" style="float:left;text-align:center;" href="view.php">Search</a>
                 
-                <a href="../inventory.php">Back</a>
+                <a class="enter" style="float:left;text-align:center;" href="../inventory.php">Back</a>
 
      </br></br>
 </br></br>
@@ -262,18 +262,17 @@ $role= $user_data['role'];
                         <td> <?php echo $v6;?><br/></td>
                     </tr>
 
-                    <tr>
-                        <td><b>Password: </b></td>
-                        <td> <?php echo $v7;?><br/></td>
-                    </tr>
+                    
 
                     
                     <tr>
                         <td></td>
                         <td></br></br>
-                            <button class="save"  value="send" <a class="link" href="adminDelete.php?" onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</button></a><button class="save"  value="send" <a class="link" href="update.php" >Update</button
-                        </td>
-                      <!--   <td>  <a class="link" href="dealerUpdate.php?">Update</a> -->
+                            
+                    
+                    <a class="enter" style="float:left;text-align:center;" href="update1.php">Update</a>
+               <a class="enter" style="float:left;text-align:center;" href="delete.php" onclick="return confirm('Are you sure you wish to delete this Record?');">Delete</a>
+
                         </td>
                     </tr>
             </table>

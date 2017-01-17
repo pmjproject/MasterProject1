@@ -1,6 +1,7 @@
 <html>
 <?php include '../../core/init.php';
 protect_page();
+
 ?>
 <?php
 $role= $user_data['role'];
@@ -59,26 +60,26 @@ $role= $user_data['role'];
     </div>
     <div id="content">
       
-		<?php
-		require "../../database/connect.php";
-		//session_start();
-		$error=FALSE;
-		$dealer_iderr = $v1 = "";
-		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			if(empty($_POST['dealer_name'])){
-				$dealer_iderr = "";
-				$error = TRUE;
-			}else{
-				
-				$dealer_name = $_POST['dealer_name'];
-				$v1 = $_POST['dealer_name'];
-				$_SESSION['dealer_name'] = $v1;
-				header("Location: serch.php");
-			}
-		}
-		?>
-		<div class="AddPro">
-		<div class="ad">
+        <?php
+        require "../../database/connect.php";
+        //session_start();
+        $error=FALSE;
+        $user_iderr = $v1 = "";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if(empty($_POST['f_name'])){
+                $user_iderr = "";
+                $error = TRUE;
+            }else{
+                
+                $f_name = $_POST['f_name'];
+                $v1 = $_POST['f_name'];
+                $_SESSION['f_name'] = $v1;
+                header("Location: serch.php");
+            }
+        }
+        ?>
+        <div class="AddPro">
+        <div class="ad">
 
 
 
@@ -92,20 +93,20 @@ $role= $user_data['role'];
                 </br></br>
 </br></br>
 
-			<h1 class="add">Search Data Entry Operator</h1>
-			<table id="ad">
-				<form action="" method="POST">
-					<tr>
-						<td>
-							<b>Data Entry Operator Name:<span class="error">* <?php echo $dealer_iderr;?></span></b>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<input type="text" name="dealer_name" size="30" maxlength="25" style="width: 300px" required>
-							<input class="search" type="submit" name="submit" value="Search">
-					</tr>
-				</form>
+            <h1 class="add">Search Data Entry Operator</h1>
+            <table id="ad">
+                <form action="" method="POST">
+                    <tr>
+                        <td>
+                            <b>Data Entry Operator Name:<span class="error">* <?php echo $user_iderr;?></span></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="text" name="f_name" size="30" maxlength="25" style="width: 300px" required>
+                            <input type="submit" name="submit" value="Search">
+                    </tr>
+                </form>
 
         
 

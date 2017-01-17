@@ -137,13 +137,13 @@ EXPORT_TABLES("localhost","root","","warranty_management");
 		<div class="AddPro">
 		<div class="ad">
 
- <a href="add.php">Add</a>
-               <a href="view.php">Search</a>
-                <a href="backup.php">Backups</a>
-                <a href="../inventory.php">Back</a>
+                <a class="enter" style="float:left;text-align:center;"href="add.php">Add</a>
+               <a class="enter" style="float:left;text-align:center;" href="view.php">Search</a>
+                <a class="enter" style="float:left;text-align:center;" href="backup.php">Backups</a>
+                <a class="enter" style="float:left;text-align:center;" href="../inventory.php">Back</a>
 
 
-              </br></br>
+              </br></br></br></br></br>
 
 			<h1 class="add">Backups</h1>
 			<table id="ad">
